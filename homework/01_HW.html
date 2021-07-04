@@ -35,6 +35,10 @@
             border-color: transparent;
         }
 
+        .cont {
+            width: 480px;
+        }
+
         .image {
             width: 480px;
             height: 300px;
@@ -62,47 +66,49 @@
       <div class="card-body">
         <h3 class="card-title">Plutone Fountain Pen <span class="description">Price: 620,000won</span></h3>
         <p class="card-text">명왕성을 당신의 손 안에..! 명왕성을 담은 행성 시리즈 한정판 만년필의 아름다운 배럴과 유려한 필기감을 느껴보세요.</p>
-          <div class="content">
-            <div class="col-auto">
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">주문자 성함</div>
+          <div class="cont">
+              <div class="content">
+                <div class="col-auto">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">주문자 성함</div>
+                    </div>
+                      <input type="text" class="form-control">
+                  </div>
                 </div>
-                  <input type="text" class="form-control">
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">수량</div>
+                <div class="col-auto">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">수량</div>
+                    </div>
+                      <select class="custom-select">
+                        <option selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                  </div>
                 </div>
-                  <select class="custom-select">
-                    <option selected></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">주소</div>
+                <div class="col-auto">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">주소</div>
+                    </div>
+                      <input type="text" class="form-control">
+                  </div>
                 </div>
-                  <input type="text" class="form-control">
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">전화번호</div>
+                <div class="col-auto">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">전화번호</div>
+                    </div>
+                      <input type="text" class="form-control">
+                  </div>
                 </div>
-                  <input type="text" class="form-control">
               </div>
-            </div>
-          </div>
-          <div class="btn">
-          <button type="button" onclick="order()" class="btn btn-primary">주문하기</button>
+              <div class="btn">
+              <button type="button" onclick="order()" class="btn btn-primary">주문하기</button>
+              </div>
           </div>
      </div>
   </div>
