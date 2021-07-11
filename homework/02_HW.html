@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            q1()
+        });
+      function q1() {
+        $.ajax({
+            type: "GET",
+            url: "http://spartacodingclub.shop/sparta_api/rate",
+            data: {},
+            success: function (response) {
+                let rate = response['rate'];
+                $('#ex_rate').text(rate);
+            }
+        })
+      }
+
+      function order() {
+          alert('주문이 완료되었습니다!');
+      }
+    </script>
+
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&family=Stylish&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        .image {
+            width: 500px;
+            height: 300px;
+            background-image: url(https://m.penstoryshop.com/web/upload/NNEditor/20200814/mobile/4a6fa1de3a507a649b19f7ea1740a2af_1597381533.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .description {
+            font-size: 15px;
+        }
+
+        .card-body {
+            width: 500px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cont {
+            width: 500px;
+        }
+
+        .btn-order {
+            display: block;
+            margin: auto;
+            width: 100px;
+        }
+
+        .card {
+            width: 500px;
+            margin: auto;
+            border: transparent;
+        }
+
+        .exchange {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+<div class="card">
+    <div class="image"></div>
+    <div class="card-body">
+        <h3>Plutone Fountain Pen <span class="description">Price: 620,000won</span></h3>
+        <p>명왕성을 당신의 손 안에..! 명왕성을 담은 행성 시리즈 한정판 만년필의 아름다운 배럴과 유려한 필기감을 느껴보세요.</p>
+        <p class="exchange">달러-원 환율: <span id="ex_rate">1219.15</span></p>
+    </div>
+    <div class="cont">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">주문자 성함</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">수량</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">주소</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">전화번호</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <button type="button" onclick="order()" class="btn btn-primary btn-order">주문하기</button>
+    </div>
+</div>
+</body>
+
+</html>
